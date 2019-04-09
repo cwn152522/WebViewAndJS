@@ -1,0 +1,40 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - MYToolKit (0.0.6):
+    - MYToolKit/MYAutolayout (= 0.0.6)
+    - MYToolKit/MYJsonModel (= 0.0.6)
+    - MYToolKit/MYTableReuseId (= 0.0.6)
+  - MYToolKit/MYAutolayout (0.0.6)
+  - MYToolKit/MYJsonModel (0.0.6)
+  - MYToolKit/MYTableReuseId (0.0.6)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
+  - MYToolKit (~> 0.0.6)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - MYToolKit
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  MYToolKit: e9d8bc9ebb4fcdcdf5067cf7f33bdd058327ccbe
+
+PODFILE CHECKSUM: d93aba68c0856205bccccc117a2587d6b51501d3
+
+COCOAPODS: 1.5.3

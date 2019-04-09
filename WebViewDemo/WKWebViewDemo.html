@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: auto auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+
+        .btn1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: auto auto;
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%,50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="btn" onclick="f1()"></div>
+
+    <div class="btn1"></div>
+
+    <script>
+        var btn = document.getElementsByClassName("btn")[0];
+
+        //这个方法用来调用oc的方法
+        function f1(e){
+            //wkwebview
+            window.webkit.messageHandlers.f2.postMessage("");
+
+            //javascriptCore
+            var result = f2();//如果是javascriptcore，直接可以得到oc的返回值
+            if(result == "3"){
+                btn.style.backgroundColor = "pink";
+            }
+        }
+
+
+        //这个方法给oc的uiwebview或wkwebview调用
+        function hello(message){
+            if(parseInt(message) == 1) {
+                btn.style.backgroundColor = "red";
+            }else{
+                btn.style.backgroundColor = "blue";
+            }
+            return "我勒个去";//oc调hello，如果是javascriptcore，可以直接返回值给oc
+        }
+
+
+
+
+        //javascriptCore 协议方式
+        var btn1 = document.getElementsByClassName("btn1")[0];
+        btn1.onclick = f2;
+        function f2() {
+            var a = OCObj.add(3, 4);
+            if(a == 7){
+                btn1.style.backgroundColor = "#ff5a5a";
+            }
+
+            OCObj.sum = 3;
+
+            OCObj.hello("酱紫的吗");
+        }
+    </script>
+</body>
+</html>
