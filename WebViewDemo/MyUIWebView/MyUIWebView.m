@@ -58,7 +58,7 @@
     
       //方式2
       //定义好JS要调用的方法, f2就是调用的f2方法名
-    context[@"f2"] = ^() {
+    context[@"f2"] = ^{
         NSArray *args = [JSContext currentArguments];
         
         for (JSValue *jsVal in args) {
@@ -66,8 +66,8 @@
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *result = [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"hello(%d)", arc4random()%2]];//调用js，直接拿到返回值
-            NSLog(@"%@", result);
+//            NSString *result = [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"hello(%d)", arc4random()%2]];//调用js，直接拿到返回值
+//            NSLog(@"%@", result);
 //            [weakContext evaluateScript:[NSString stringWithFormat:@"hello(%d)", arc4random()%2]];
         });
         

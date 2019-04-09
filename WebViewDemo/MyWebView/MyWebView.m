@@ -96,7 +96,10 @@
         _webView.opaque = NO;
         _webView.scrollView.backgroundColor = [UIColor clearColor];
         _webView.backgroundColor = [UIColor clearColor];
-//        kAvailable(9.0, _webView.allowsBackForwardNavigationGestures = YES;);
+        if(@available(iOS 9.0, *)){
+             _webView.allowsBackForwardNavigationGestures = YES;
+        }
+
         _webView.scrollView.showsVerticalScrollIndicator = NO;
         _webView.scrollView.showsHorizontalScrollIndicator = NO;
         [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
