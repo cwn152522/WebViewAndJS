@@ -261,11 +261,12 @@
 }
 //服务器返回200以外的状态码时，都调用请求失败的方法，从而可以做一些处理。
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    if (((NSHTTPURLResponse *)navigationResponse.response).statusCode == 200) {
-        decisionHandler (WKNavigationResponsePolicyAllow);
-    }else {
-        decisionHandler(WKNavigationResponsePolicyCancel);
-    }
+    decisionHandler(WKNavigationResponsePolicyAllow);
+//    if (((NSHTTPURLResponse *)navigationResponse.response).statusCode == 200) {
+//        decisionHandler (WKNavigationResponsePolicyAllow);
+//    }else {
+//        decisionHandler(WKNavigationResponsePolicyCancel);
+//    }
 }
 
 
