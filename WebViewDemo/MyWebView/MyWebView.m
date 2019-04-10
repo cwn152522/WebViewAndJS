@@ -165,7 +165,7 @@
     NSDictionary *obj = message.body;
     [_webView evaluateJavaScript:[NSString stringWithFormat:@"hello(%d)", arc4random()%2] completionHandler:nil];
 }
-- (void)onclickBtn{
+- (void)f2{
     NSLog(@"哈哈哈");
 }
 

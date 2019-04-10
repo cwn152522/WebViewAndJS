@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WebViewDemo/MyWebView/MyWebView.m"
-            timestampString = "576511076.646812"
+            timestampString = "576552901.498842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "205"
             endingLineNumber = "205"
-            landmarkName = "-viewForZoomingInScrollView:"
-            landmarkType = "7">
+            landmarkName = "MyWebView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
